@@ -18,5 +18,5 @@ schema in `db.rkt`. Define command line dispatches in `main.rkt`.
 
 # TODO
 
- - Make 'db-init' work.
  - Find an ORM.
+ - Write tutorial for dealing with form data.
