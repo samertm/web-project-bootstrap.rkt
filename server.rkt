@@ -1,5 +1,7 @@
 #lang web-server
 
+(require "server-utils.rkt")
+
 (provide interface-version stuffer start)
 (define interface-version 'stateless)
 
@@ -18,7 +20,6 @@
 ;; Request handlers:
 
 (define (serve-home req)
-  (response/xexpr
-   `(html
-     (body
-      (p "Sample website homepage")))))
+  (define sample-var "like this!")
+  ;; Templates: http://docs.racket-lang.org/web-server/templates.html.
+  (response/default #:body (template "templates/index.html")))
